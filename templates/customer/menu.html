@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Menu</h1>
+<ul>
+    {% for dish in dishes %}
+        <li>
+            <h2>{{ dish.name }}</h2>
+            <p>Description: {{ dish.description }}</p>
+            <p>Price: ${{ dish.price }}</p>
+            <img src="{{ dish.image.url }}" alt="{{ dish.name }}" width="200">
+            <p>Category: {{ dish.categories.name }}</p>
+        </li>
+    {% endfor %}
+</ul>
+
+
+{%endblock%}

@@ -36,10 +36,10 @@ class Customer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='customer_profile')
     name = models.CharField(max_length=15)
     email = models.EmailField(unique=True)
-    street = models.ManyToManyField('Street', related_name='customers')
-    city = models.ManyToManyField('City', related_name='customers')
-    state = models.ManyToManyField('State', related_name='customers')
-    zipcode = models.ManyToManyField('Zipcode', related_name='customers')
+    street = models.ForeignKey(Street, on_delete=models.CASCADE, related_name='customers')
+    city = models.ForeignKey(City, on_delete=models.CASCADE, related_name='customers')
+    state = models.ForeignKey(State, on_delete=models.CASCADE, related_name='customers')
+    zipcode = models.ForeignKey(Zipcode, on_delete=models.CASCADE, related_name='customers')
 
     def __str__(self):
         return self.name
