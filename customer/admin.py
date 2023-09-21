@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Customer, Dish, MealCategory
+from .models import Customer, Dish, MealCategory, Order
 
 @admin.register(Customer)
 class CustomerAdmin(admin.ModelAdmin):
@@ -12,3 +12,8 @@ class DishAdmin(admin.ModelAdmin):
     list_display = ('categories', 'name', 'price')
 
 admin.site.register(MealCategory)
+
+@admin.register(Order)
+class OrderAdmin(admin.ModelAdmin):
+
+    list_display = ('name', 'total_price', 'city')

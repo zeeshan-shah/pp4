@@ -1,19 +1,89 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
-<h1>Menu</h1>
-<ul>
-    {% for dish in dishes %}
-        <li>
-            <h2>{{ dish.name }}</h2>
-            <p>Description: {{ dish.description }}</p>
-            <p>Price: ${{ dish.price }}</p>
-            <img src="{{ dish.image.url }}" alt="{{ dish.name }}" width="200">
-            <p>Category: {{ dish.categories.name }}</p>
-        </li>
-    {% endfor %}
-</ul>
+<div class="menu-container">
+  <h1 class="menu-heading">Menu</h1>
 
+  <!-- Starter category -->
+  <div class="menu-category">
+    <h2 class="category-heading">Starter</h2>
+    <ul class="menu-items">
+      {% for dish in starter_dishes %}
+      <li class="menu-item">
+        <input type="checkbox" class="dish-checkbox" name="selected_dishes" value="{{ dish.id }}">
+        <div class="circular-image">
+            <img src="{{ dish.image.url }}" alt="{{ dish.name }}" class="dish-image">
+        </div>
+        <div class="dish-details">
+          <h3 class="dish-name">{{ dish.name }}</h3>
+          <p class="dish-description">{{ dish.description }}</p>
+        </div>
+        <p class="dish-price">$ {{ dish.price }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 
-{%endblock%}
+  <!-- Main Course category -->
+  <div class="menu-category">
+    <h2 class="category-heading">Main Course</h2>
+    <ul class="menu-items">
+      {% for dish in main_course_dishes %}
+      <li class="menu-item">
+        <input type="checkbox" class="dish-checkbox" name="selected_dishes" value="{{ dish.id }}">
+        <div class="circular-image">
+            <img src="{{ dish.image.url }}" alt="{{ dish.name }}" class="dish-image">
+        </div>
+        <div class="dish-details">
+          <h3 class="dish-name">{{ dish.name }}</h3>
+          <p class="dish-description">{{ dish.description }}</p>
+        </div>
+        <p class="dish-price">$ {{ dish.price }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- Dessert category -->
+  <div class="menu-category">
+    <h2 class="category-heading">Dessert</h2>
+    <ul class="menu-items">
+      {% for dish in dessert_dishes %}
+      <li class="menu-item">
+        <input type="checkbox" class="dish-checkbox" name="selected_dishes" value="{{ dish.id }}">
+        <div class="circular-image">
+            <img src="{{ dish.image.url }}" alt="{{ dish.name }}" class="dish-image">
+        </div>
+        <div class="dish-details">
+          <h3 class="dish-name">{{ dish.name }}</h3>
+          <p class="dish-description">{{ dish.description }}</p>
+        </div>
+        <p class="dish-price">$ {{ dish.price }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- Drink category -->
+  <div class="menu-category">
+    <h2 class="category-heading">Drink</h2>
+    <ul class="menu-items">
+      {% for dish in drink_dishes %}
+      <li class="menu-item">
+        <input type="checkbox" class="dish-checkbox" name="selected_dishes" value="{{ dish.id }}">
+        <div class="circular-image">
+            <img src="{{ dish.image.url }}" alt="{{ dish.name }}" class="dish-image">
+        </div>
+        <div class="dish-details">
+          <h3 class="dish-name">{{ dish.name }}</h3>
+          <p class="dish-description">{{ dish.description }}</p>
+        </div>
+        <p class="dish-price">$ {{ dish.price }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+{% endblock %}

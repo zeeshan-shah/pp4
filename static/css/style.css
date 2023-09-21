@@ -1,0 +1,240 @@
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* Text styles */
+p, ul, ol, li {
+    font-family: 'Courgette', cursive;
+    font-weight: 400;
+}
+
+/* Apply a background color to the body */
+body {
+    background-color: #0B0B0B;
+    color: #EEEBD0; /* Default text color */
+    font-family: Arial, sans-serif;
+}
+
+/* Style the navbar */
+.navbar {
+    background-color: #0B0B0B;
+    color: #EEEBD0;
+}
+
+/* Style the navbar brand link */
+.navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700; /* Bold */
+    --bs-navbar-brand-font-size: 35px;
+}
+
+/* Style the navigation links */
+.navbar-nav .nav-link {
+    color: #EEEBD0;
+    font-size: 20px;
+    transition: color 0.3s; /* Add a smooth color transition */
+}
+
+/* Style the active menu link */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: #CC2936;
+}
+
+/* Style the page content container */
+.container {
+    padding: 20px;
+}
+
+/* Style buttons */
+.btn {
+    background-color: #CC2936;
+    color: #EEEBD0;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #EEEBD0;
+    color: #CC2936;
+}
+
+/* Style form inputs */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #EEEBD0;
+    border-radius: 5px;
+}
+
+/* Style form buttons */
+.form-btn {
+    background-color: #CC2936;
+    color: #EEEBD0;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.form-btn:hover {
+    background-color: #EEEBD0;
+    color: #CC2936;
+}
+
+/* Style headings */
+h1,
+h2,
+h3 {
+    color: #CC2936;
+    font-weight: bold;
+}
+
+/* Style links */
+a {
+    color: #CC2936;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #EEEBD0;
+}
+
+/* Style images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style the menu container */
+.menu-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Style the menu heading */
+  .menu-heading {
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+    font-style: italic;
+    color: #DC143C;
+    font-size: 60px;
+    margin-bottom: 60px;
+  }
+  
+  /* Style the menu category */
+  .menu-category {
+    margin-bottom: 30px;
+  }
+  
+  /* Style the category heading */
+  .category-heading {
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+    font-style: italic;
+    color: #FF6B6B;
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the menu items */
+  .menu-items {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Style each menu item */
+  .menu-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Style the dish checkbox */
+  .dish-checkbox {
+    margin-right: 20px;
+    transform: scale(1.5);
+  }
+  
+  /* Style the dish image */
+  .dish-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    float: left; /* Image on the left side */
+  }
+  
+  /* Style the dish details */
+  .dish-details {
+    flex: 1;
+  }
+  
+  /* Style the dish name */
+  .dish-name {
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+    font-size: 25px;
+    font-style: italic;
+    color: #0B0B0B;
+    margin-bottom: 5px;
+  }
+  
+  /* Style the dish description */
+  .dish-description {
+    font-family: 'Courgette', cursive;
+    font-weight: 400;
+    font-size: 16px;
+    color: #0B0B0B;
+    margin: 0;
+  }
+  
+  /* Style the dish price */
+  .dish-price {
+    font-family: 'Courgette', cursive;
+    font-weight: 400;
+    font-size: 20px;
+    color: #AA0000;
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 25px
+  }
+  
+
+/* Style for circular images with a border */
+.circular-image {
+    width: 200px; /* Set the desired image width */
+    height: 200px; /* Set the desired image height */
+    border: 2px solid #CC2936; /* Border color (crimson) */
+    border-radius: 50%; /* Make the image circular */
+    overflow: hidden; /* Hide overflowing content (if any) */
+    margin-right: 10px;
+}
+
+/* Style for images inside circular containers */
+.circular-image img {
+    width: 100%; /* Ensure the image fills the circular container */
+    height: auto; /* Automatically adjust the image height */
+    display: block; /* Remove any spacing or alignment issues */
+}
+
+  
