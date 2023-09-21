@@ -125,116 +125,82 @@ img {
     height: auto;
 }
 
-/* Style the menu container */
-.menu-container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  /* Style the menu heading */
-  .menu-heading {
+/* Style the menu heading */
+.menu-heading {
     font-family: 'Crimson Text', serif;
     font-weight: 600;
     font-style: italic;
     color: #DC143C;
     font-size: 60px;
     margin-bottom: 60px;
-  }
-  
-  /* Style the menu category */
-  .menu-category {
-    margin-bottom: 30px;
-  }
-  
-  /* Style the category heading */
-  .category-heading {
+}
+
+/* Style the category heading */
+.category-heading {
     font-family: 'Crimson Text', serif;
     font-weight: 600;
     font-style: italic;
     color: #FF6B6B;
     font-size: 35px;
     margin-bottom: 10px;
-  }
-  
-  /* Style the menu items */
-  .menu-items {
-    list-style: none;
-    padding: 0;
-  }
-  
-  /* Style each menu item */
-  .menu-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+}
+
+/* Style each menu item card */
+.card {
     text-align: left;
-  }
-  
-  /* Style the dish checkbox */
-  .dish-checkbox {
-    margin-right: 20px;
+}
+
+/* Style the dish checkbox */
+.form-check-input {
     transform: scale(1.5);
-  }
-  
-  /* Style the dish image */
-  .dish-image {
-    width: 100px;
-    height: 100px;
+}
+
+/* Style the dish image */
+.card-img-top {
     object-fit: cover;
+    overflow: hidden; /* Hide overflowing content (if any) */
     float: left; /* Image on the left side */
-  }
-  
-  /* Style the dish details */
-  .dish-details {
-    flex: 1;
-  }
-  
-  /* Style the dish name */
-  .dish-name {
+    margin-right: 20px;
+}
+
+/* Style the dish title */
+.card-title {
     font-family: 'Crimson Text', serif;
     font-weight: 600;
     font-size: 25px;
     font-style: italic;
     color: #0B0B0B;
     margin-bottom: 5px;
-  }
-  
-  /* Style the dish description */
-  .dish-description {
+}
+
+/* Style the dish description */
+.card-text {
     font-family: 'Courgette', cursive;
     font-weight: 400;
     font-size: 16px;
     color: #0B0B0B;
     margin: 0;
-  }
-  
-  /* Style the dish price */
-  .dish-price {
+}
+
+/* Style the dish price */
+.price {
     font-family: 'Courgette', cursive;
-    font-weight: 400;
+    font-weight: bold;
     font-size: 20px;
-    color: #AA0000;
-    text-align: left;
-    margin-top: 5px;
-    margin-left: 25px
-  }
-  
-
-/* Style for circular images with a border */
-.circular-image {
-    width: 200px; /* Set the desired image width */
-    height: 200px; /* Set the desired image height */
-    border: 2px solid #CC2936; /* Border color (crimson) */
-    border-radius: 50%; /* Make the image circular */
-    overflow: hidden; /* Hide overflowing content (if any) */
-    margin-right: 10px;
+    color: #CC2936;
 }
 
-/* Style for images inside circular containers */
-.circular-image img {
-    width: 100%; /* Ensure the image fills the circular container */
-    height: auto; /* Automatically adjust the image height */
-    display: block; /* Remove any spacing or alignment issues */
+/* Style for the custom button */
+#custom-btn {
+    background-color: #0B0B0B; /* Set the desired background color */
+    color: #EEEBD0; /* Set the desired text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-  
+#custom-btn:hover {
+    background-color: #CC2936; /* Change the background color on hover */
+    color: #EEEBD0; /* Change the text color on hover */
+}

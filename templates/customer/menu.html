@@ -2,88 +2,99 @@
 {% load static %}
 {% block content %}
 
-<div class="menu-container">
-  <h1 class="menu-heading">Menu</h1>
+<div class="container">
+    <h1 class="text-center menu-heading">Menu</h1>
 
-  <!-- Starter category -->
-  <div class="menu-category">
-    <h2 class="category-heading">Starter</h2>
-    <ul class="menu-items">
-      {% for dish in starter_dishes %}
-      <li class="menu-item">
-        <input type="checkbox" class="dish-checkbox" name="selected_dishes" value="{{ dish.id }}">
-        <div class="circular-image">
-            <img src="{{ dish.image.url }}" alt="{{ dish.name }}" class="dish-image">
+    <!-- Starter Category -->
+    <div class="row justify-content-center">
+        <div class="col-12 text-center">
+            <h2 class="category-heading">Starter</h2>
         </div>
-        <div class="dish-details">
-          <h3 class="dish-name">{{ dish.name }}</h3>
-          <p class="dish-description">{{ dish.description }}</p>
+        {% for dish in starter_dishes %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card">
+                <div class="card-body d-flex justify-content-center">
+                    <input type="checkbox" name="selected_dishes" value="{{ dish.id }}" class="form-check-input">
+                </div>
+                <img src="{{ dish.image.url }}" alt="{{ dish.name }}" class="card-img-top">
+                <div class="card-body text-center">
+                    <h3 class="card-title">{{ dish.name }}</h3>
+                    <p class="card-text d-none d-md-block">{{ dish.description }}</p>
+                    <p class="card-text price">Price: ${{ dish.price }}</p>
+                </div>
+            </div>
         </div>
-        <p class="dish-price">$ {{ dish.price }}</p>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+        {% endfor %}
+    </div>
 
-  <!-- Main Course category -->
-  <div class="menu-category">
-    <h2 class="category-heading">Main Course</h2>
-    <ul class="menu-items">
-      {% for dish in main_course_dishes %}
-      <li class="menu-item">
-        <input type="checkbox" class="dish-checkbox" name="selected_dishes" value="{{ dish.id }}">
-        <div class="circular-image">
-            <img src="{{ dish.image.url }}" alt="{{ dish.name }}" class="dish-image">
+    <!-- Main Course Category -->
+    <div class="row justify-content-center">
+        <div class="col-12 text-center">
+            <h2 class="category-heading">Main Course</h2>
         </div>
-        <div class="dish-details">
-          <h3 class="dish-name">{{ dish.name }}</h3>
-          <p class="dish-description">{{ dish.description }}</p>
+        {% for dish in main_course_dishes %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card">
+                <div class="card-body d-flex justify-content-center">
+                    <input type="checkbox" name="selected_dishes" value="{{ dish.id }}" class="form-check-input">
+                </div>
+                <img src="{{ dish.image.url }}" alt="{{ dish.name }}" class="card-img-top">
+                <div class="card-body text-center">
+                    <h3 class="card-title">{{ dish.name }}</h3>
+                    <p class="card-text d-none d-md-block">{{ dish.description }}</p>
+                    <p class="card-text price">Price: ${{ dish.price }}</p>
+                </div>
+            </div>
         </div>
-        <p class="dish-price">$ {{ dish.price }}</p>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+        {% endfor %}
+    </div>
 
-  <!-- Dessert category -->
-  <div class="menu-category">
-    <h2 class="category-heading">Dessert</h2>
-    <ul class="menu-items">
-      {% for dish in dessert_dishes %}
-      <li class="menu-item">
-        <input type="checkbox" class="dish-checkbox" name="selected_dishes" value="{{ dish.id }}">
-        <div class="circular-image">
-            <img src="{{ dish.image.url }}" alt="{{ dish.name }}" class="dish-image">
+    <!-- Dessert Category -->
+    <div class="row justify-content-center">
+        <div class="col-12 text-center">
+            <h2 class="category-heading">Dessert</h2>
         </div>
-        <div class="dish-details">
-          <h3 class="dish-name">{{ dish.name }}</h3>
-          <p class="dish-description">{{ dish.description }}</p>
+        {% for dish in dessert_dishes %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card">
+                <div class="card-body d-flex justify-content-center">
+                    <input type="checkbox" name="selected_dishes" value="{{ dish.id }}" class="form-check-input">
+                </div>
+                <img src="{{ dish.image.url }}" alt="{{ dish.name }}" class="card-img-top">
+                <div class="card-body text-center">
+                    <h3 class="card-title">{{ dish.name }}</h3>
+                    <p class="card-text d-none d-md-block">{{ dish.description }}</p>
+                    <p class="card-text price">Price: ${{ dish.price }}</p>
+                </div>
+            </div>
         </div>
-        <p class="dish-price">$ {{ dish.price }}</p>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+        {% endfor %}
+    </div>
 
-  <!-- Drink category -->
-  <div class="menu-category">
-    <h2 class="category-heading">Drink</h2>
-    <ul class="menu-items">
-      {% for dish in drink_dishes %}
-      <li class="menu-item">
-        <input type="checkbox" class="dish-checkbox" name="selected_dishes" value="{{ dish.id }}">
-        <div class="circular-image">
-            <img src="{{ dish.image.url }}" alt="{{ dish.name }}" class="dish-image">
+    <!-- Drink Category -->
+    <div class="row justify-content-center">
+        <div class="col-12 text-center">
+            <h2 class="category-heading">Drink</h2>
         </div>
-        <div class="dish-details">
-          <h3 class="dish-name">{{ dish.name }}</h3>
-          <p class="dish-description">{{ dish.description }}</p>
+        {% for dish in drink_dishes %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card">
+                <div class="card-body d-flex justify-content-center">
+                    <input type="checkbox" name="selected_dishes" value="{{ dish.id }}" class="form-check-input">
+                </div>
+                <img src="{{ dish.image.url }}" alt="{{ dish.name }}" class="card-img-top">
+                <div class="card-body text-center">
+                    <h3 class="card-title">{{ dish.name }}</h3>
+                    <p class="card-text d-none d-md-block">{{ dish.description }}</p>
+                    <p class="card-text price">Price: ${{ dish.price }}</p>
+                </div>
+            </div>
         </div>
-        <p class="dish-price">$ {{ dish.price }}</p>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+        {% endfor %}
+    </div>
+    <div class="text-center mb-4">
+        <input type="submit" value="Place Order" class="btn btn-primary" id="custom-btn">
+    </div>  
 </div>
 
 {% endblock %}
